@@ -1,0 +1,61 @@
+/* Estilos básicos del cuerpo */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main (con sidebars), Footer */
+    grid-template-columns: 1fr; /* Una columna por defecto */
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Contenedor principal */
+.container {
+    display: grid;
+    grid-template-areas:
+        "left-sidebar main right-sidebar";
+    grid-template-columns: 1fr 3fr 1fr; /* Proporción: Sidebar Izq - Main - Sidebar Der */
+    gap: 1rem; /* Espaciado entre columnas */
+    padding: 1rem;
+}
+
+/* Sidebars y Main Content */
+.left-sidebar {
+    grid-area: left-sidebar;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.right-sidebar {
+    grid-area: right-sidebar;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+main {
+    grid-area: main;
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
