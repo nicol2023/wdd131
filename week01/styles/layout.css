@@ -18,6 +18,25 @@ header {
     padding: 1rem;
 }
 
+/* Navegación con Flexbox */
+nav {
+    display: flex; /* Declaración requerida */
+    justify-content: space-around; /* Espaciado uniforme entre enlaces */
+    align-items: center; /* Alineación vertical */
+    background-color: #333; /* Color de fondo */
+    padding: 1rem; /* Espaciado interno */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* Contenedor principal */
 .container {
     display: grid;
