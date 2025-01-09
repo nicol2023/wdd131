@@ -1,0 +1,123 @@
+/* Importar fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Fuente seleccionada */
+    color: #333; /* Texto legible */
+    background-color: #f9f9f9; /* Color de fondo suave */
+    line-height: 1.6;
+}
+
+/* Estilo para el header */
+header {
+    background-color: #4CAF50; /* Verde suave */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Navegación con Flexbox */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre enlaces */
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #45a049; /* Efecto hover */
+    border-radius: 5px;
+}
+
+/* Sección principal */
+main {
+    max-width: 900px;
+    margin: 20px auto; /* Centrado horizontal */
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px;
+}
+
+/* Estilo de las tarjetas */
+.card {
+    display: grid; /* Grid para diseño flexible */
+    grid-template-columns: 1fr; /* Una columna para dispositivos pequeños */
+    gap: 20px;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100px; /* Tamaño de imagen */
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* Aside: recursos */
+.resources {
+    margin-top: 20px;
+}
+
+.resources h2 {
+    color: #4CAF50;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources li a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.resources li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer #lastModified {
+    font-size: 0.8rem;
+}
+
+/* Respuestas responsivas */
+@media (min-width: 768px) {
+    .card {
+        grid-template-columns: 2fr 1fr; /* Dos columnas en pantallas medianas */
+    }
+}
