@@ -7,20 +7,29 @@ body {
     font-family: 'Poppins', sans-serif; /* Fuente seleccionada */
     color: #333; /* Texto legible */
     background-color: #f9f9f9; /* Color de fondo suave */
-    line-height: 1.6;
+    line-height: 2.4;
 }
 
 /* Estilo para el header */
 header {
-    background-color: #4CAF50; /* Verde suave */
+    background-color: #6a1b9a; /* Verde suave */
     color: white;
-    padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 header h1 {
     margin: 0;
     font-size: 1.8rem;
+}
+
+/* Contenedor del nav */
+nav {
+    background-color: #994296; /* Fondo claro del nav */
+    padding: 1px 2px;
+    margin: 2px auto; /* Centrado horizontal */
+    max-width: 2100px; /* Ancho máximo para el recuadro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 /* Navegación con Flexbox */
@@ -30,7 +39,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaciado entre enlaces */
+    gap: 80px; /* Espaciado entre enlaces */
 }
 
 nav li {
@@ -45,61 +54,85 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #45a049; /* Efecto hover */
+    background-color: #333; /* Efecto hover */
     border-radius: 5px;
 }
 
 /* Sección principal */
 main {
-    max-width: 900px;
-    margin: 20px auto; /* Centrado horizontal */
+    max-width: 1100px;
+    width: 100%;
+    margin: 19px; /* Centrado horizontal */
+    border-radius: 12px;
+    display: flex; /* Flexbox para diseño en dos columnas */
+    gap: 150px; /* Espaciado entre columnas */
+    align-items: stretch; /* Ambas columnas tendrán la misma altura */
+    justify-content: space-between;
     padding: 20px;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-radius: 10px;
 }
 
-/* Estilo de las tarjetas */
-.card {
-    display: grid; /* Grid para diseño flexible */
-    grid-template-columns: 1fr; /* Una columna para dispositivos pequeños */
-    gap: 20px;
+.card, .resources {
+    display: inline-table;
+    background-color: whitesmoke; /* Fondo azul claro (opcional) */
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 48%;
 }
+.card h2 {
+    background: #6a1b9a;
+    max-width: 1100px;
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    margin:auto;
+
+}
+
+
 
 .card .content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    gap: 10px;
+    text-align: left;
+    padding: 12px;
 }
 
 .card img {
-    max-width: 100px; /* Tamaño de imagen */
-    border-radius: 50%;
+    max-width: 120px; /* Tamaño de imagen */
+    border-radius: 00%;
     margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra en la imagen */
 }
 
-/* Aside: recursos */
-.resources {
-    margin-top: 20px;
-}
+
 
 .resources h2 {
-    color: #4CAF50;
+    background: #6a1b9a;
+    max-width: 1100px;
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    margin:auto;
+
+
 }
 
-.resources ul {
-    list-style: none;
-    padding: 0;
-}
+
 
 .resources li a {
     text-decoration: none;
-    color: #4CAF50;
+    color: #333;
+    transition: color 0.3s ease;
 }
 
 .resources li a:hover {
     text-decoration: underline;
+    color: #388E3C; /* Color más oscuro al hacer hover */
 }
 
 /* Footer */
@@ -107,17 +140,21 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
     margin-top: 20px;
 }
 
 footer #lastModified {
     font-size: 0.8rem;
+    color: yellow;
 }
 
 /* Respuestas responsivas */
-@media (min-width: 768px) {
-    .card {
-        grid-template-columns: 2fr 1fr; /* Dos columnas en pantallas medianas */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Los elementos se apilan en pantallas pequeñas */
+    }
+
+    .card, .resources {
+        flex: 1; /* Ocupan el mismo ancho */
     }
 }
