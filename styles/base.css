@@ -136,7 +136,6 @@ main {
 
 
 .content-flag img {
-    max-width: auto; /* Ajusta el tamaño máximo de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 10px; /* Bordes redondeados para la imagen (opcional) */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejorar el diseño */
