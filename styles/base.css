@@ -65,29 +65,18 @@ main {
     margin: 19px; /* Centrado horizontal */
     border-radius: 12px;
     display: flex; /* Flexbox para diseño en dos columnas */
-    gap: 150px; /* Espaciado entre columnas */
     align-items: stretch; /* Ambas columnas tendrán la misma altura */
     justify-content: space-between;
-    padding: 20px;
 }
 
 .card, .resources {
-    display: inline-table;
+    flex: 1; /* Ocupan el mismo espacio en el contenedor flex */
+    /*display: inline-table;*/
     background-color: whitesmoke; /* Fondo azul claro (opcional) */
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     width: 48%;
-}
-.card h2 {
-    background: #6a1b9a;
-    max-width: 1100px;
-    text-align: center;
-    color: white;
-    font-size: 1.4rem;
-    border-top-right-radius: 12px;
-    border-top-left-radius: 12px;
-    margin:auto;
-
+    padding: 12px;
 }
 
 
@@ -108,21 +97,80 @@ main {
 }
 
 
-
-.resources h2 {
+.card h2, .resources h2 {
     background: #6a1b9a;
-    max-width: 1100px;
     text-align: center;
     color: white;
     font-size: 1.4rem;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
-    margin:auto;
+    margin: auto;
+}
 
+.content-about {
+    display: flex; /* Activar Flexbox */
+    flex-direction: row; /* Invertir el orden: imagen a la derecha, texto a la izquierda */
+    gap: 20px; /* Espaciado entre la imagen y el texto */
+    align-items: center; /* Centrar verticalmente */
+    text-align: left; /* Asegurar que el texto esté alineado a la izquierda */
+}
 
+.content-about img {
+    max-width: 25%; /* Ajustar el tamaño de la imagen (puedes modificar el porcentaje) */
+    border-radius: 12px; /* Opcional: aplicar bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Opcional: sombra */
+}
+
+.content-about p {
+    flex: 1; /* El texto ocupa el espacio restante */
+    margin: 0; /* Asegurar márgenes limpios */
+}
+
+.content-flag {
+    display: flex; /* Activa Flexbox para organizar los elementos */
+    flex-direction: row; /* Asegura que los elementos estén en línea */
+    gap: 20px; /* Espaciado entre la imagen y el texto */
+    align-items: center; /* Centra verticalmente los elementos */
+    text-align: left; /* Asegura que el texto del párrafo esté alineado a la izquierda */
 }
 
 
+.content-flag img {
+    max-width: auto; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen (opcional) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejorar el diseño */
+}
+
+.content-flag p {
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
+    margin: 0; /* Elimina márgenes adicionales */
+}
+
+.content-flag h2 {
+    background: none; /* Elimina cualquier color de fondo */
+    text-decoration: underline; /* Aplica subrayado */
+    color: inherit; /* Asegura que use el color del texto definido globalmente */
+    margin: 0 0 10px 0; /* Ajusta los márgenes si es necesario */
+}
+h2.centered {
+    text-align: center;
+    margin: 20px 0; /* Espaciado superior e inferior */
+    background: none;
+    color: #333;
+    text-decoration: underline; /* Subrayado */
+}
+
+figure {
+    text-align: center; /* Centra el contenido dentro del <figure> */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+figcaption {
+    font-size: 0.9em; /* Tamaño de letra más pequeño */
+    color: gray; /* Color gris */
+    margin-top: 5px; /* Espaciado entre la imagen y el texto */
+}
 
 .resources li a {
     text-decoration: none;
