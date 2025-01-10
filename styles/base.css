@@ -167,7 +167,7 @@ figure {
 
 figcaption {
     font-size: 0.9em; /* Tamaño de letra más pequeño */
-    color: gray; /* Color gris */
+    color: #333; /* Color gris */
     margin-top: 5px; /* Espaciado entre la imagen y el texto */
 }
 
