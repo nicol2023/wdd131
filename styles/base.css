@@ -6,14 +6,14 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif; /* Fuente seleccionada */
     color: #333; /* Texto legible */
-    background-color: #f9f9f9; /* Color de fondo suave */
+    background-color: whitesmoke; /* Color de fondo suave */
     line-height: 2.4;
 }
 
 /* Estilo para el header */
 header {
     background-color: #6a1b9a; /* Verde suave */
-    color: white;
+    color: whitesmoke;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
 }
@@ -48,7 +48,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #e5fffe;
     padding: 10px 15px;
     transition: all 0.3s ease;
 }
@@ -72,7 +72,7 @@ main {
 .card, .resources {
     flex: 1; /* Ocupan el mismo espacio en el contenedor flex */
     /*display: inline-table;*/
-    background-color: whitesmoke; /* Fondo azul claro (opcional) */
+    background-color: rgb(239, 188, 239); /* Fondo azul claro (opcional) */
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     width: 48%;
@@ -100,7 +100,7 @@ main {
 .card h2, .resources h2 {
     background: #6a1b9a;
     text-align: center;
-    color: white;
+    color: whitesmoke;
     font-size: 1.4rem;
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
@@ -185,14 +185,14 @@ figcaption {
 /* Footer */
 footer {
     background-color: #333;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     margin-top: 20px;
 }
 
 footer #lastModified {
     font-size: 0.8rem;
-    color: yellow;
+    color: rgb(234, 234, 44);
 }
 
 /* Respuestas responsivas */
