@@ -80,7 +80,7 @@ header::after {
 
 #data h2 {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: left;
     background-color: var(--accent-color);
     width: calc(100% + 20px); /* Sobresale hacia la izquierda */
@@ -118,7 +118,7 @@ header::after {
 
 #weather h2 {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: left;
     background-color: var(--accent-color);
     width: calc(100% + 20px); /* Sobresale hacia la izquierda */
