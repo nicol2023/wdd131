@@ -1,0 +1,45 @@
+@media (min-width: 768px) {
+    #hamburger {
+        display: none; /* Hide hamburger menu */
+    }
+
+    nav ul {
+        display: flex; /* Show menu items horizontally */
+        flex-direction: row; /* Horizontal alignment */
+        position: static; /* Reset position for desktop */
+        background-color: transparent; /* No background for desktop menu */
+    }
+    
+    nav ul {
+        gap: 2rem;
+    }
+
+    .temple-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    main {
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .temple-container {
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+    main {
+        max-width: 900px;
+    }
+    header {
+        text-align: left;
+        padding: 1.5rem;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
