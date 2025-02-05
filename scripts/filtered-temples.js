@@ -90,5 +90,87 @@ const temples = [
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // Add more temple objects here...
+    {
+      templeName: "Buenos Aires Argentina",
+      location: "Buenos Aires, Argentina",
+      dedicated: "1968, January, 17",
+      area: 30659,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/buenos-aires-argentina-temple/buenos-aires-argentina-temple-2970.jpg"
+    },
+    {
+      templeName: "Denver Colorado",
+      location: "Centennial, Colorado",
+      dedicated: "1968, October, 24",
+      area: 29117,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/denver-colorado-temple/denver-colorado-temple-43087.jpg"
+    },
+    {
+      templeName: "Birmingham England",
+      location: "Royal Sutton Coldfield, Birmingham",
+      dedicated: "1968, October, 24",
+      area: 10800,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/birmingham-england-temple/birmingham-england-temple-45435.jpg"
+    },
+
   ];
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const templeContainer = document.querySelector(".temple-container");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    // Function to display temples
+    function displayTemples(filteredTemples) {
+      templeContainer.innerHTML = ""; // Clear previous content
+
+      filteredTemples.forEach(temple => {
+          const templeCard = document.createElement("figure");
+          templeCard.innerHTML = `
+              <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+              <figcaption>
+                  <h3>${temple.templeName}</h3>
+                  <p><strong>Location:</strong> ${temple.location}</p>
+                  <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                  <p><strong>Area:</strong> ${temple.area} sq ft</p>
+              </figcaption>
+          `;
+          templeContainer.appendChild(templeCard);
+      });
+  }
+
+  // Function to filter temples based on menu selection
+  function filterTemples(category) {
+    let filtered;
+    switch (category) {
+        case "Old":
+            filtered = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
+            break;
+        case "New":
+            filtered = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
+            break;
+        case "Large":
+            filtered = temples.filter(temple => temple.area > 90000);
+            break;
+        case "Small":
+            filtered = temples.filter(temple => temple.area < 10000);
+            break;
+        default:
+            filtered = temples;
+    }
+    displayTemples(filtered);
+}
+
+// Event listeners for navigation menu
+navLinks.forEach(link => {
+  link.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent default link behavior
+      const category = event.target.textContent;
+      filterTemples(category);
+  });
+});
+
+// Display all temples on page load
+displayTemples(temples);
+});
