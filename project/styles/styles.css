@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+
+:root {
+    --color-primary: #EEABC4; /* color header y footer*/
+    --color-secondary: #73347a; /* solo text header*/
+    --color-accent: #C5DECD; /* para Nav y buttons*/
+    --color-contrast: #030301; /* para h2 */
+    --text-light: #fff; /*color fondo*/
+    --text-dark: #2C2C2C; /*color text gral*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--text-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: var(--color-primary);
+    padding: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--color-contrast);
+    font-family: 'Pacifico', cursive;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--color-accent);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la paleta de colores */
+.large-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.small-container {
+    text-align: center;
+}
+
+.colored-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*.box-1 { background-color: var(--color-primary); }
+.box-2 { background-color: var(--color-secondary); }
+.box-3 { background-color: var(--color-accent); border: 1px solid #ddd; }
+.box-4 { background-color: var(--color-contrast); color: var(--text-light); }*/
+
+footer {
+    margin-top: 20px;
+    background-color: var(--color-primary);
+    padding: 10px;
+    color: var(--text-dark);
+}
