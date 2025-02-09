@@ -20,15 +20,3 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("year").textContent = `© ${new Date().getFullYear()} Evelin Montaño`;
     document.getElementById("modified-date").textContent = `Last Modified: ${document.lastModified}`;
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    let reviewsCount = localStorage.getItem("reviewsCount") || 0;
-    reviewsCount++;
-    localStorage.setItem("reviewsCount", reviewsCount);
-    
-    document.getElementById("reviewCount").textContent = `Total Reviews Submitted: ${reviewsCount}`;
-
-    // Agregar año actual y última modificación en el footer
-    document.getElementById("year").textContent = `© ${new Date().getFullYear()} Evelin Montaño`;
-    document.getElementById("modified-date").textContent = `Last Modified: ${document.lastModified}`;
-});
