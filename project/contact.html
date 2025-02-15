@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con nosotros para consultas sobre amigurumis personalizados">
+    <title>Contacto - Amigurumis Personalizados</title>
+    <link rel="stylesheet" href="/project/styles/main.css">
+    <script src="/project/scripts/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Customigurumis</h1>
+        <nav>
+            <ul>
+                <li><a href="customigurumis.html">Inicio</a></li>
+                <li><a href="catalog.html">Catálogo</a></li>
+                <li><a href="customize.html">Personalizar</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-intro">
+            <h2>¡Contáctanos!</h2>
+            <p>¿Tienes alguna pregunta o consulta? ¡Nos encantaría escucharte! Completa el formulario y te responderemos lo antes posible.</p>
+        </section>
+
+        <div class="contact-container">
+            <section class="contact-form">
+                <h3>Formulario de Contacto</h3>
+                <form id="contactForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Asunto:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta general</option>
+                            <option value="pedido">Información sobre pedidos</option>
+                            <option value="personalizado">Amigurumi personalizado</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </section>
+
+            <section class="contact-info">
+                <h3>Información de Contacto</h3>
+                <div class="info-container">
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <p>Argentina</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">✉️</span>
+                        <p>customigurumis@email.com</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">⏰</span>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                    </div>
+                    <div class="social-media">
+                        <h4>Síguenos en:</h4>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Pinterest</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span>🎀 Evelin Montaño ​🎀​ Argentina</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

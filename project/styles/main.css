@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+
+:root {
+    --color-primary: #EEABC4; /* color header y footer*/
+    --color-secondary: #73347a; /* solo text header*/
+    --color-accent: #C5DECD; /* para Nav y buttons*/
+    --color-contrast: #030301; /* para h2 */
+    --text-light: #fff; /*color fondo*/
+    --text-dark: #2C2C2C; /*color text gral*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--text-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilos del menú de navegación */
+nav {
+    background-color: var(--color-accent);
+    padding: 20px;
+    text-align: center;
+    
+}
+
+header h1 {
+    background-color: var(--color-primary);
+    padding: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    
+}
+
+nav ul li {
+    display: inline;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Estilos del hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra toda la sección */
+    border-radius: 0;
+}
+.hero h1, .hero p, .hero .btn {
+    position: relative;
+    z-index: 1; /* Mantiene el texto y el botón encima de la imagen */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: var(--color-accent);
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--color-secondary);
+    color: var(--text-light);
+}
+
+/* Estilos de la sección de amigurumis destacados */
+.featured {
+    padding: 20px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.featured h2 {
+    color: var(--color-contrast);
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+.featured .amigurumi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.featured .amigurumi {
+    background-color: var(--text-light);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.featured .amigurumi img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.featured .amigurumi h3 {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+}
+/******************* CATALOG-------------------------*/
+
+/* Estilos del contenedor del catálogo */
+.catalog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Diseño de la lista de productos */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilos de cada producto */
+.product {
+    background-color: var(--text-light);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Ajuste de las imágenes */
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
+    border-radius: 10px;
+}
+
+/* Títulos y texto */
+.product h3 {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+}
+
+.product p {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin: 5px 0;
+}
+
+/* Botón */
+.product .btn {
+    margin-top: 10px;
+}
+
+/* Media Queries para la página de catálogo */
+
+/* Para tablets y dispositivos medianos */
+@media screen and (max-width: 1024px) {
+    .catalog-container {
+        padding: 15px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .product h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    /* Header y navegación */
+    header h1 {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 8px 12px;
+    }
+
+    /* Título principal */
+    main h2 {
+        font-size: 1.8rem;
+        margin: 20px 0;
+    }
+
+    /* Contenedor del catálogo */
+    .catalog-container {
+        padding: 10px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    /* Ajustes de productos */
+    .product {
+        padding: 10px;
+    }
+
+    .product img {
+        height: 150px;
+    }
+
+    .product h3 {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .product p {
+        font-size: 0.9rem;
+    }
+
+    .product .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Para dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+    .product-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .product {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .product img {
+        height: 200px;
+    }
+
+    footer {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+}
+/* ------------------- CUSTOMIZE SECCTION --------------------------*/
+
+/* ---- Estilos generales para la sección de personalización ---- */
+.customization-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fdf3f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* ---- Estilos para etiquetas y campos del formulario ---- */
+.customization-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #444;
+}
+
+.customization-container select,
+.customization-container input[type="color"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 2px solid #d48aa6;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ---- Estilos para los checkboxes ---- */
+.customization-container fieldset {
+    border: none;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.customization-container legend {
+    font-weight: bold;
+    color: #444;
+}
+
+.customization-container input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* ---- Estilos para el botón ---- */
+.customization-container .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: var(--color-accent);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.customization-container .btn:hover {
+    background: var(--color-secondary);
+    color: var(--text-light);
+}
+main h2 {
+    font-family: 'Pacifico', cursive; 
+}
+
+/* Media Queries para la página de personalización */
+
+/* Para tablets y dispositivos medianos */
+@media screen and (max-width: 1024px) {
+    .customization-container {
+        padding: 20px;
+    }
+
+    #customization-form {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 0.95rem;
+    }
+
+    select, input[type="color"], button {
+        font-size: 0.95rem;
+    }
+}
+
+/* Para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+    }
+
+    main h2 {
+        font-size: 1.8rem;
+        margin: 20px 0;
+    }
+
+    .customization-container {
+        padding: 15px;
+    }
+
+    #customization-form {
+        max-width: 100%;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    select, input[type="color"], button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button.btn {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Para dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    nav ul li a {
+        padding: 6px 10px;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    .customization-container {
+        padding: 10px;
+    }
+
+    #customization-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    label {
+        font-size: 0.85rem;
+    }
+
+    select, input[type="color"], button {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+
+    button.btn {
+        padding: 8px;
+    }
+}
+/*------------------- ABOUT.HTML SECCTION ----------------------------*/
+
+/* Estilos para la página About */
+.about-intro,
+.about-process,
+.about-care {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fdf3f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de secciones */
+.about-intro h2,
+.about-process h2,
+.about-care h2 {
+    color: var(--color-secondary);
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Párrafos */
+.about-intro p,
+.about-process p,
+.about-care p {
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+/* Listas en secciones de proceso y cuidados */
+.about-process ul,
+.about-care ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-process li,
+.about-care li {
+    position: relative;
+    padding: 10px 0 10px 30px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+/* Añadir iconos decorativos antes de cada elemento de lista */
+.about-process li::before,
+.about-care li::before {
+    content: '🧶';  /* Emoji de ovillo de lana */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilos específicos para la lista de cuidados */
+.about-care li::before {
+    content: '💕';  /* Emoji de corazón para la sección de cuidados */
+}
+
+/* Animación suave al hacer hover sobre las secciones */
+.about-intro:hover,
+.about-process:hover,
+.about-care:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .about-intro,
+    .about-process,
+    .about-care {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .about-intro h2,
+    .about-process h2,
+    .about-care h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-process li,
+    .about-care li {
+        padding-left: 25px;
+    }
+}
+
+/* Efecto de transición al cargar la página */
+main section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Retraso en la animación para cada sección */
+.about-intro {
+    animation-delay: 0.2s;
+}
+
+.about-process {
+    animation-delay: 0.4s;
+}
+
+.about-care {
+    animation-delay: 0.6s;
+}
+
+/*---------------------ABOUT.HTML SECCTION ----------------------*/
+
+/* Estilos para la página de contacto */
+
+/* Sección de introducción */
+.contact-intro {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contact-intro h2 {
+    color: var(--color-secondary);
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-intro p {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.contact-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del formulario */
+.contact-form {
+    background-color: #fdf3f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    color: var(--color-secondary);
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 5px rgba(115, 52, 122, 0.2);
+}
+
+/* Información de contacto */
+.contact-info {
+    background-color: var(--color-accent);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    color: var(--color-secondary);
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+}
+
+.info-item p {
+    margin: 0;
+    color: var(--text-dark);
+}
+
+/* Redes sociales */
+.social-media {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-media h4 {
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 15px;
+    background-color: var(--color-primary);
+    color: var(--text-dark);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--color-secondary);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 20px;
+    }
+
+    .contact-intro h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Previene zoom en iOS */
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-intro,
+.contact-form,
+.contact-info {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.contact-form {
+    animation-delay: 0.2s;
+}
+
+.contact-info {
+    animation-delay: 0.4s;
+}
+
+/*---------------- FOOTER----------------------------*/
+/* Estilos del footer */
+footer {
+    margin-top: 20px;
+    background-color: var(--color-primary);
+    padding: 10px;
+    color: var(--text-dark);
+    text-align: center;
+}
