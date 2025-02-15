@@ -18,5 +18,5 @@ if (order) {
 document.getElementById('confirm-order').addEventListener('click', () => {
     alert('¡Pedido confirmado! Gracias por tu compra.');
     localStorage.removeItem('amigurumiOrder');
-    window.location.href = '/project/customigurumis.html';
+    window.location.href = 'customigurumis.html';
 });
